@@ -34,3 +34,15 @@ Good luck!
 
 After you complete this kata, you may try yourself at Decode the Morse code, advanced.
 """
+
+
+
+import re
+
+
+def decodeMorse(morse_code):
+    return re.sub(
+        '([.-]+)|(?<=[.-])(   )(?=[.-])| *',
+        lambda code: MORSE_CODE[code.group(1)] if code.group(1) else
+        ' ' if code.group(2) else '',
+        morse_code)
