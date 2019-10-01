@@ -15,3 +15,8 @@ Testing: [1, 1, 1, 1] ==> 15
 Testing: [1, 0, 1, 1] ==> 11
 However, the arrays can have varying lengths, not just limited to 4.
 """
+
+
+
+def binary_array_to_number(arr):
+    return int(''.join(map(str, arr)), 2)
