@@ -29,3 +29,11 @@ digital_root(493193)
 => 1 + 1
 => 2
 """
+
+
+
+def digital_root(n):
+    if len(str(n)) == 1:
+        return n
+    else:
+        return digital_root(sum(map(int, list(str(n)))))
