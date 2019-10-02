@@ -7,3 +7,8 @@ Examples:
 14: -14
 -34: 34
 """
+
+
+
+def opposite(number):
+  return -1 * number
