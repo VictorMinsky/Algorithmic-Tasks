@@ -17,3 +17,12 @@ it may happen that the input string have leading, trailing whitespaces and more 
 Don't modify the input
 For C: The result is freed.
 """
+
+
+
+def order_weight(strng):
+    nums = map(int, strng.split())
+    srt = []
+    for num in nums:
+        srt.append([str(num), sum(map(int, list(str(num))))])
+    return ' '.join(map(str, [i[0] for i in sorted(sorted(srt, key=lambda x: x[0]), key=lambda x: x[1])]))
