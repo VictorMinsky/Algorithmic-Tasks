@@ -29,3 +29,18 @@ If a or b are empty then the result is self-evident.
 
 a or b are empty or not empty lists.
 """
+
+
+
+def comp(array1, array2):
+    if array1 == array2:
+        return True
+    elif array1 is None or array2 is None or (len(array1) != len(array2)):
+        return False
+    else:
+        array1 = sorted(array1)
+        array2 = sorted(array2)
+        for i in range(len(array1)):
+            if array1[i] != array2[i] and array1[i] != array2[i] ** 2 and array2[i] != array1[i] ** 2:
+                return False
+    return True
