@@ -44,3 +44,4 @@ def comp(array1, array2):
             if array1[i] != array2[i] and array1[i] != array2[i] ** 2 and array2[i] != array1[i] ** 2:
                 return False
     return True
+	
