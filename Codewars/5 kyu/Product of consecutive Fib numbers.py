@@ -36,3 +36,13 @@ http://en.wikipedia.org/wiki/Fibonacci_number
 
 http://oeis.org/A000045
 """
+
+
+
+def productFib(prod):
+    n = 0
+    np = 1
+    while (n * np < prod):
+        np += n
+        n = np - n
+    return [n, np, n * np == prod]
