@@ -14,3 +14,11 @@ remove_smallest([1,2,3,4,5]) = [2,3,4,5]
 remove_smallest([5,3,2,1,4]) = [5,3,2,4]
 remove_smallest([2,2,1,2,1]) = [2,2,2,1]
 """
+
+
+
+def remove_smallest(numbers):
+    if not numbers:
+        return numbers
+    numbers.remove(sorted(numbers)[0])
+    return numbers
