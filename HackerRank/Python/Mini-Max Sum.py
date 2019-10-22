@@ -47,14 +47,15 @@ Hints: Beware of integer overflow! Use 64-bit Integer.
 # Complete the miniMaxSum function below.
 def miniMaxSum(arr):
     sm = sum(arr)
-    mn, mx = 0, []
+    ans = []
     for num in arr:
-        mn = min(sm, sm - num)
-        mx.append(sm - num)
-    print(mn, max(mx))
+        ans.append(sm - num)
+        ans.append(sm - num)
+    print(min(ans), max(ans))
 
 
 if __name__ == '__main__':
     arr = list(map(int, input().rstrip().split()))
 
     miniMaxSum(arr)
+
