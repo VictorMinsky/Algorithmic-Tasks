@@ -66,7 +66,8 @@ import sys
 
 # Complete the utopianTree function below.
 def utopianTree(n):
-    return ~(~1 << (n >> 1)) << n % 2
+	# return ~(~1 << (n >> 1)) << n % 2
+    return 2 ** (((x + x % 2) // 2) + 1) - 1 - x % 2
 
 
 if __name__ == '__main__':
