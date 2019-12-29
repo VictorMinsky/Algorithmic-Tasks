@@ -9,5 +9,6 @@ Note! The input is a Real number (actual type is language dependent) and is >= 0
 
 
 
+
 def cockroach_speed(s):
     return s * 100000 // 3600
